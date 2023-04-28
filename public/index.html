@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestionnaire utilisateur</title>
-</head>
-<body>
-    <h1>Gestionnaire utilisateur</h1>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestionnaire d'utilisateur - MDL</title>
 
-    <table>
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Prenom</th>
-                <th>Nom</th>
-                <th>Email</th>
-                <th>Société</th>
-                <th>Pays</th>
-                <th>Date</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody id = "users">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
+    </head>
 
-        </tbody>
-    </table>
-    
-</body>
+    <body>
+        <h1>Gestionnaire d'utilisateur</h1>
+
+        <form>
+            <label for="first">Prénom</label>
+            <input name="first" id="first" type="text">
+
+            <label for="last">Nom</label>
+            <input name="last" id="last" type="text">
+
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email">
+
+            <label for="company">Société</label>
+            <input name="company" id="company" type="text">
+
+            <label for="country">Pays</label>
+            <input name="country" id="country" type="text">
+
+            <input value="Créer utilisateur" type="submit">
+            <p id="error"></p>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Société</th>
+                    <th>Pays</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="users"></tbody>
+        </table>
+    </body>
 </html>
